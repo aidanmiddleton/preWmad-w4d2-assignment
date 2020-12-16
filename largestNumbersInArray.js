@@ -3,7 +3,25 @@
 
 //you code here
 
+const findLargestNums = function(arr) {
+    let result = [];
 
+    for (i = 0; i < arr.length; i++) {
+        let maxValue = arr[i][0];
+        for (j = 1; j < arr[i].length; j++) {
+            if (arr[i][j] > maxValue) {
+                maxValue = arr[i][j];
+            }
+        }
+
+        result.push(maxValue);
+    }
+
+
+
+    return result;
+
+};
 
 console.log(findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]])); 
 // ➞ [7, 90, 2]
